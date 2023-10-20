@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <limits.h>
-#include <float.h>
-#include <stdint.h>
+// #include <stdio.h>
+// #include <limits.h>
+// #include <float.h>
+// #include <stdint.h>
 
 // int main(void)
 // {
@@ -907,57 +907,57 @@
 
 
 
-//98번
-#include <stdio.h>
+// //98번
+// #include <stdio.h>
 
-int main(void)
-{
-    int h, w, n, l, d, x, y; //세로가 h 가로가 w, 막대의 개수가 n, 막대의 길이가 l, 방향이 d, 각 막대의 시작 좌표가 x(세로)와 y(가로)
-    scanf("%d %d", &h, &w);
+// int main(void)
+// {
+//     int h, w, n, l, d, x, y; //세로가 h 가로가 w, 막대의 개수가 n, 막대의 길이가 l, 방향이 d, 각 막대의 시작 좌표가 x(세로)와 y(가로)
+//     scanf("%d %d", &h, &w);
 
-    // int **pan = malloc(sizeof(int *) * h); //배열의 세로길이만큼 pointer to int 크기의 동적메모리 할당.
+//     // int **pan = malloc(sizeof(int *) * h); //배열의 세로길이만큼 pointer to int 크기의 동적메모리 할당.
 
-    // for (int i = 0; i < h ; i++)
-    // {
-    //     pan[i] = malloc(sizeof(int) * w); //배열의 가로길이 만큼 int 크기의 동적메모리 할당.
-    // }
+//     // for (int i = 0; i < h ; i++)
+//     // {
+//     //     pan[i] = malloc(sizeof(int) * w); //배열의 가로길이 만큼 int 크기의 동적메모리 할당.
+//     // }
 
-    int pan[100][100] = { 0, }; // 배열으로 판을 만들고 0으로 초기화.
+//     int pan[100][100] = { 0, }; // 배열으로 판을 만들고 0으로 초기화.
 
-    scanf("%d", &n); //막대 개수 확인
+//     scanf("%d", &n); //막대 개수 확인
 
-    for(int i = 0; i < n; i++)
-    {
-        scanf("%d %d %d %d", &l, &d, &x, &y); //막대의 길이, 방향, 시작위치 확인. 이 때 d는 0이면 오른쪽, 1이면 아래방향을 향한다.
+//     for(int i = 0; i < n; i++)
+//     {
+//         scanf("%d %d %d %d", &l, &d, &x, &y); //막대의 길이, 방향, 시작위치 확인. 이 때 d는 0이면 오른쪽, 1이면 아래방향을 향한다.
 
-        if (d == 0)
-        {
-            for(int j = 0; j < l; j++)
-            {
-                pan[x-1][y + j-1] = 1;
-            }
-        }
-        else if(d == 1)
-        {
-            for(int j = 0; j < l; j++)
-            {
-                pan[x+j-1][y-1] = 1;
-            }            
-        }
-    }
+//         if (d == 0)
+//         {
+//             for(int j = 0; j < l; j++)
+//             {
+//                 pan[x-1][y + j-1] = 1;
+//             }
+//         }
+//         else if(d == 1)
+//         {
+//             for(int j = 0; j < l; j++)
+//             {
+//                 pan[x+j-1][y-1] = 1;
+//             }            
+//         }
+//     }
 
     
-    for(int i = 0; i < h; i++)
-    {
-        for(int j = 0; j < w; j++)
-        {
-            printf("%d ", pan[i][j]);
-        }
-        printf("\n");
-    }
+//     for(int i = 0; i < h; i++)
+//     {
+//         for(int j = 0; j < w; j++)
+//         {
+//             printf("%d ", pan[i][j]);
+//         }
+//         printf("\n");
+//     }
     
-    return 0;   
-}
+//     return 0;   
+// }
 
 
 
@@ -1032,3 +1032,15 @@ int main(void)
 
 
 //printf("Hello World!");
+
+
+
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello World");
+
+    return 0;
+}
